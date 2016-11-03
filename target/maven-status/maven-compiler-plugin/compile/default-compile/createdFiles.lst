@@ -1,0 +1,5 @@
+org\jboss\cats\Resources.class
+org\jboss\cats\web\AddController.class
+org\jboss\cats\domain\ManagedBeanCatDao.class
+org\jboss\cats\domain\Cat.class
+org\jboss\cats\domain\CatDao.class

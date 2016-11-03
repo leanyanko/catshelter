@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<ui:composition template="template.xhtml">
+    <ui:define name="content">
+        <h:messages />
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel for="name">Enter cat's name:</h:outputLabel>
+                <h:inputText id="name" value="#{newCat.name}" />
+                <h:message for="name" />
+
+                <h:outputLabel for="color">Enter color:</h:outputLabel>
+                <h:inputText id="color" value="#{newCat.color}" />
+                <h:message for="color" />
+
+                <h:outputLabel for="age">Enter age:</h:outputLabel>
+                <h:inputText id="age" value="#{newCat.age}" />
+                <h:message for="age" />
+
+            </h:panelGrid>
+            <h:commandButton action="#{addController.add}"
+                             value="Add User" />
+        </h:form>
+        <h:link outcome="/allcats.xhtml">See the cat's we have!</h:link>
+    </ui:define>
+</ui:composition>
+</html>
